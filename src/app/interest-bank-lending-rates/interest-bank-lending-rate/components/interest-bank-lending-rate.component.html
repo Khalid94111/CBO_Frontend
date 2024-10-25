@@ -1,0 +1,59 @@
+<abp-page [title]="'CBO' | abpLocalization">
+
+
+
+  <!--<suite-custom-code-block-5>-->
+  <!--</suite-custom-code-block-5>-->
+  <div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+  
+    </div>
+
+    <!--<suite-custom-code-block-6>-->
+    <!--</suite-custom-code-block-6>-->
+    <div class="card-body">
+      <dx-data-grid  [dataSource]="interestBankLendingRatesDataSource"
+      [rtlEnabled]="false"
+      keyExpr="id"
+      (onRowInserted)="$event.component.navigateToRow($event.key)"
+      [showBorders]="true" 
+      [showColumnLines]="true" 
+      [showRowLines]="true"
+      [remoteOperations]="true"
+
+      [rowAlternationEnabled]="true" >
+          <dxo-filter-row [visible]="true"></dxo-filter-row>
+          <dxo-header-filter [visible]="true"></dxo-header-filter>
+          <dxo-editing mode="popup" [allowAdding]="allowAdding" [allowUpdating]="allowUpdating" [allowDeleting]="allowDeleting" >
+          <dxo-popup
+
+          width="30%" height="40%"
+          title="{{ '::Add/Edit' | abpLocalization }}"
+          [showTitle]="true">
+        </dxo-popup>
+        <dxo-form labelMode="floating" > 
+      
+            
+          </dxo-form>
+          </dxo-editing>
+      
+          <dxi-column dataField="endOfPeriod" dataType="date" format="dd-MM-yyyy" caption="{{'::EndOfPeriod' | abpLocalization}}">
+          </dxi-column>
+      
+          <dxi-column dataField="amountInRO" dataType="number" caption="{{'::AmountInRO' | abpLocalization}}">
+          </dxi-column>
+          <dxi-column dataField="interestRate" dataType="number"  caption="{{'::InterestRate' | abpLocalization}}">
+          </dxi-column>
+    
+          <dxo-paging [pageSize]="10"></dxo-paging>
+          <dxo-pager [showPageSizeSelector]="true" [allowedPageSizes]="[10, 20, 30]"></dxo-pager>
+      
+       </dx-data-grid>
+    </div>
+  </div>
+  <!--<suite-custom-code-block-11>-->
+  <!--</suite-custom-code-block-11>-->
+</abp-page>
+<!--<suite-custom-code-block-12>-->
+<!--</suite-custom-code-block-12>-->
+
