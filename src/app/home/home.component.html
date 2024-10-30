@@ -2,9 +2,12 @@
   <div class="card">
     <div class="card-header">{{ '::Welcome' | abpLocalization }}</div>
     <div class="card-body">
+      <div class="col-md-auto text-center">
+
       <p>
         {{ '::LongWelcomeMessage' | abpLocalization }}
       </p>
+      </div>
       <p *ngIf="!hasLoggedIn">
         <a (click)="login()" class="btn btn-primary" role="button"
           ><i class="fa fa-sign-in me-1" aria-hidden="true"></i>{{ 'AbpAccount::Login' | abpLocalization }}</a
@@ -18,7 +21,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-md-auto text-center">
-          <img src= "../../assets/images/login/logo-dark.png" style="max-width: 400px;"
+          <img src= "../../assets/images/image2.jpg" 
                class="w-100 mb-5 my-md-3">
         </div>
      

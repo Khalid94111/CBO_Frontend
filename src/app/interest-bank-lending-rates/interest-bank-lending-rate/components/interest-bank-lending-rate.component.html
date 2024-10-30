@@ -1,16 +1,10 @@
 <abp-page [title]="'CBO' | abpLocalization">
 
-
-
-  <!--<suite-custom-code-block-5>-->
-  <!--</suite-custom-code-block-5>-->
   <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
   
     </div>
 
-    <!--<suite-custom-code-block-6>-->
-    <!--</suite-custom-code-block-6>-->
     <div class="card-body">
       <dx-data-grid  [dataSource]="interestBankLendingRatesDataSource"
       [rtlEnabled]="false"
@@ -20,11 +14,12 @@
       [showColumnLines]="true" 
       [showRowLines]="true"
       [remoteOperations]="true"
-
-      [rowAlternationEnabled]="true" >
+            [rowAlternationEnabled]="true" >
           <dxo-filter-row [visible]="true"></dxo-filter-row>
           <dxo-header-filter [visible]="true"></dxo-header-filter>
           <dxo-editing mode="popup" [allowAdding]="allowAdding" [allowUpdating]="allowUpdating" [allowDeleting]="allowDeleting" >
+            <dxo-group-panel [visible]="true"></dxo-group-panel>
+
           <dxo-popup
 
           width="30%" height="40%"
